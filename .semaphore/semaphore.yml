@@ -1,5 +1,5 @@
 version: v1.0
-name: Parallel
+name: Initial Pipeline
 agent:
   machine:
     type: f1-standard-2
@@ -11,24 +11,3 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
-            - ls
-        - name: 'Job #2'
-          commands:
-            - checkout
-            - ls
-        - name: 'Job #3'
-          commands:
-            - checkout
-            - ls
-        - name: 'Job #4'
-          commands:
-            - checkout
-            - ls
-        - name: 'Job #5'
-          commands:
-            - checkout
-            - ls
-        - name: 'Job #6'
-          commands:
-            - checkout
-            - ls
