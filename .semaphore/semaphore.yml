@@ -20,3 +20,15 @@ blocks:
           commands:
             - checkout
             - ls
+        - name: 'Job #4'
+          commands:
+            - checkout
+            - ls
+        - name: 'Job #5'
+          commands:
+            - checkout
+            - ls
+        - name: 'Job #6'
+          commands:
+            - checkout
+            - ls
